@@ -13,6 +13,8 @@ const substitutionModule = (function () {
     let output = "";
     let encrypt = input.split("").map((letter) => standard.indexOf(letter));
     let decrypt = input.split("").map((letter) => alphabet.indexOf(letter));
+    // let test = alphabet.split("").map((letter) => alphabet.find((letter)) => {if (!1) { return false;}}))
+    // console.log(test);
     if (encode) {
       for (let idx in encrypt) {
         if (encrypt[idx] === -1) {
