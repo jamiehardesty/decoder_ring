@@ -1,5 +1,3 @@
-// Write your tests here!
-
 const { expect } = require("chai");
 const polybius = require("../src/polybius");
 
@@ -20,7 +18,3 @@ describe("polybius()", () => {
     expect(actual).to.equal(expected);
   });
 });
-
-// polybius("3251131343 2543241341", false); //> "hello world"
-// polybius("4432423352125413", false); //> "th(i/j)nkful
-// polybius("44324233521254134", false); //> false

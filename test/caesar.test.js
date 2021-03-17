@@ -1,9 +1,6 @@
-// Write your tests here!
-
 const { expect } = require("chai");
 const caesar = require("../src/caesar");
 
-// describe("caesarModule", () => {
 describe("caesar()", () => {
   it("should encode a message with the shift value", () => {
     const expected = "bpqa qa i amkzmb umaaiom!";
@@ -21,4 +18,3 @@ describe("caesar()", () => {
     expect(actual).to.equal(expected);
   });
 });
-// });
