@@ -62,13 +62,10 @@ const polybiusModule = (function () {
         }
         output.push(keyByValue(alphaObj, num));
       }
-      if (output.length % 2 !== 1 && crypt % 2 !== 1) {
-        if(output.length == 6 && crypt == 12){
-          return output.join("");
-        }
-        else {
-          return false;
-        }
+      if (output.length % 2 !== 0 && crypt % 2 !== 0) {
+// if(output.length == 6 && crypt == 12){return output.join("");}else{
+        return false;
+        // }
       }
     }
     return output.join("");

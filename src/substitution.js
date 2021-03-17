@@ -5,8 +5,8 @@ const substitutionModule = (function () {
     }
     const standard = "abcdefghijklmnopqrstuvwxyz";
     let output = "";
-    const encrypt = input.split("").map((letter) => standard.indexOf(letter));
-    const decrypt = input.split("").map((letter) => alphabet.indexOf(letter));
+    const encrypt = input.toLowerCase().split("").map((letter) => standard.indexOf(letter));
+    const decrypt = input.toLowerCase().split("").map((letter) => alphabet.indexOf(letter));
     if (encode) {
       for (let idx in encrypt) {
         if (encrypt[idx] === -1) {
