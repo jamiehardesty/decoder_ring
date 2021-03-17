@@ -1,13 +1,12 @@
-const substitutionModule = (function () {
-  // 
+const substitutionModule = (function () { 
   function substitution(input, alphabet, encode = true) {
     if (!alphabet || alphabet.length != 26 || alphabet.includes("abc")) {
       return false;
     }
-    let standard = "abcdefghijklmnopqrstuvwxyz";
+    const standard = "abcdefghijklmnopqrstuvwxyz";
     let output = "";
-    let encrypt = input.split("").map((letter) => standard.indexOf(letter));
-    let decrypt = input.split("").map((letter) => alphabet.indexOf(letter));
+    const encrypt = input.split("").map((letter) => standard.indexOf(letter));
+    const decrypt = input.split("").map((letter) => alphabet.indexOf(letter));
     if (encode) {
       for (let idx in encrypt) {
         if (encrypt[idx] === -1) {
@@ -19,7 +18,7 @@ const substitutionModule = (function () {
       return output;
     }
     if (!encode) {
-      for (let idx in decrypt) {
+      for (const idx in decrypt) {
         if (decrypt[idx] === -1) {
           output += " ";
         } else {
@@ -33,5 +32,4 @@ const substitutionModule = (function () {
     substitution,
   };
 })();
-
 module.exports = substitutionModule.substitution;

@@ -35,8 +35,8 @@ const polybiusModule = (function () {
     }
   }
   function polybius(input, encode = true) {
-    let output = [],
-      crypt = input.length;
+    let output = [];
+    const crypt = input.length;
     if (encode) {
       for (let i = 0; i < crypt; i++) {
         let words = input[i].toLowerCase();
@@ -53,9 +53,9 @@ const polybiusModule = (function () {
     }
     if (!encode) {
       for (let i = 0; i < crypt; i += 2) {
-        let rowIdx = input.charAt(i);
-        let colIdx = input.charAt(i + 1);
-        let num = Number([rowIdx, colIdx].join(""));
+        const rowIdx = input.charAt(i);
+        const colIdx = input.charAt(i + 1);
+        const num = Number([rowIdx, colIdx].join(""));
         if (!Number(input[i])) {
           output.push(input[i]);
           i = i - 1;
@@ -77,5 +77,4 @@ const polybiusModule = (function () {
     polybius,
   };
 })();
-
 module.exports = polybiusModule.polybius;
